@@ -83,14 +83,20 @@ body {
                     width: fit-content;
                     font-weight: 700;
                     letter-spacing: 1.2rem;
-                    }
-                    
+                    filter: invert(1);
+                }
+
                 & .description {
                     padding: 1rem 0;
                     width: 65%;
                     font-size: 1rem;
                     text-align: justify;
                     text-justify: inter-word;
+                    filter: invert(1);
+                }
+
+                & i {
+                    filter: invert(1);
                 }
             }
 
@@ -101,6 +107,7 @@ body {
             padding: 2rem;
 
             p {
+                filter: invert(1);
                 padding: 0;
                 margin: 0;
             }
@@ -111,6 +118,7 @@ body {
         display: flex;
         gap: 1rem;
         margin-bottom: 3rem;
+        filter: invert(1);
 
         & .creators {
             display: flex;
