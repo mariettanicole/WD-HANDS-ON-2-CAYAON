@@ -97,3 +97,12 @@ body {
 .fiveserver-info-wrapper {
   display: none;
 }
+
+@media only screen and (max-width: 1024px) {
+  .top {
+    & .title {
+      font-size: 4.5rem;
+      padding-left: 0;
+    }
+  }
+}
