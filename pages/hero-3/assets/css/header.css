@@ -10,8 +10,10 @@
     justify-content: flex-end;
     padding: .7rem 1rem;
     gap: 1rem;
-    color: white;
+    color: black;
     height: fit-content;
+    position: absolute;
+    z-index: 100;
     
     & .btn {
         background: rgba(255, 255, 255, 0.1);
