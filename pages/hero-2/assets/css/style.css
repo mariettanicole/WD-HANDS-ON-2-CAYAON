@@ -144,3 +144,34 @@ body {
         }
     }
 }
+
+@media only screen and (max-width: 1024px) {
+.hero {
+    & .wallpaper { 
+        & h1 {
+            font-size: 10rem;
+            letter-spacing: 3rem;
+        }
+    }
+
+    & .content {
+        & .card1, & .card2 {
+            width: 25dvw;
+            & .title {
+                font-size: 1.2rem;
+                margin-bottom: 0;
+                border-bottom: none;
+            }
+            & .description {
+                font-size: .7rem;
+
+            }
+        }
+
+        & .card1 {
+            transform: translateY(-3rem);
+        }
+    }
+
+}
+}

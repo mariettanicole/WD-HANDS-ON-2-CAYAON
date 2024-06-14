@@ -46,3 +46,9 @@
         filter: invert(1);
     }
 }
+
+@media only screen and (max-width: 1024px) {
+    & .card2 {
+        width: 60dvw;
+    }
+}

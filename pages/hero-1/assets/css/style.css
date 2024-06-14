@@ -138,3 +138,21 @@ body {
         }
     }
 }
+
+@media only screen and (max-width: 1024px) {
+    .contents {
+        & .middle {
+            & .card, & .others {
+                width: 70dvw;
+
+            }
+        }
+
+    }
+
+    .hero-background {
+        & .mascot {
+            height: 10rem;
+        }
+    }
+}

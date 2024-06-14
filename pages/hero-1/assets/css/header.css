@@ -11,7 +11,7 @@
     padding: .7rem 1rem;
     gap: 1rem;
     color: white;
-    height: 60px;
+    height: fit-content;
     
     & .btn {
         background: rgba(255, 255, 255, 0.1);
@@ -47,6 +47,14 @@
             &::before {
                 transform: skew(20deg) translateY(-5px) translateX(-20px);
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .header {
+        & .btn {
+            font-size: 1rem;
         }
     }
 }
