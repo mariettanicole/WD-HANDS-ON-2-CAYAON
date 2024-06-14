@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    position: relative;
+    height: 300dvh;
+    width: 100dvw;
+    overflow-x: hidden;
+}
+
+.hero {
+    width: 100dvw;
+    position: relative;
+    color: white;
+    
+    & .wallpaper {
+        position: absolute;
+        width: 100dvw;
+        height: 100dvh;
+        z-index: -5;
+        
+        & .background, & .character, & h1 {
+            height: 100dvh;
+            position: absolute;
+            width: 100%;
+        }
+
+        & img {
+            object-fit: cover;
+        }
+
+        & .background {
+            z-index: -4;
+        }
+
+        & h1 {
+            top: 18rem;
+            text-align: center;
+            font-size: 15rem;
+            letter-spacing: 5rem;
+            color: white;
+            font-weight: 900;
+        }
+
+        & .lower-layer {
+            z-index: -3;
+        }
+
+        & .top-layer {
+            color: transparent;
+            align-self: center;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: white;
+            z-index: -1;
+        }
+
+        & .character {
+            z-index: -2;
+        }
+
+    }
+
+    & .date {
+        position: absolute;
+        top: 3rem;
+        left: 5rem;
+        font-weight: 800;
+
+        & .day {
+            letter-spacing: .5rem;
+            font-size: 1.2rem;
+        }
+
+        & .month {
+            letter-spacing: .5rem;
+        }
+
+        &::before {
+            content: '';
+            height: 3rem;
+            width: 1.2rem;
+            background-color: #ff000085;
+            position: absolute;
+            z-index: -1;
+            transform: translateY(-.4rem) translateX(-.5rem);
+        }
+    }
+
+    & .content {
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 4rem;
+        justify-content: space-between;
+
+        & .top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .8rem;
+
+            & .description {
+                width: fit-content;
+                font-size: .8rem;
+            }
+
+            & .letters {
+                font-weight: 600;
+                letter-spacing: .7rem;
+            }
+        }
+
+        & .card1, & .card2 {
+            width: 20dvw;
+            text-align:justify;
+            background-color: rgba(0, 0, 0, 0.308);
+            padding: .7rem 1rem;
+            border-radius: 5px;
+            align-self: self-start;
+            position: relative;
+        }
+            
+        & .card1 {
+            transform: translateY(-8rem);
+        }
+
+        & .card2 {
+            & .title {
+                border-bottom: 4px  solid white;
+                width: fit-content;
+                margin-bottom: 1rem;
+            }
+        }
+
+        & .name {
+            background-color: rgba(0, 0, 0, 0.39);
+            padding: .2rem 2rem;
+            border-radius: 50px;
+        }
+    }
+}
