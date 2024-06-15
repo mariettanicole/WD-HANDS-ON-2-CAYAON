@@ -28,6 +28,10 @@
         overflow: hidden;
         transition: all .2s ease;
 
+        &.active {
+            background: rgba(255, 255, 255, 0.479);
+        }
+
         &::before {
             position: absolute;
             width: 10px;
