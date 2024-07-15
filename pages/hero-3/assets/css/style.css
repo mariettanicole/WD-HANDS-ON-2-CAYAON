@@ -1,112 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap');
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://media3.giphy.com/media/kcxXRFPcXUVe8CTLkE/200.gif?cid=6c09b952hzoj5ogz9hzpg4ui9c6mjhndsjk66rg2sutb2ib5&ep=v1_internal_gif_by_id&rid=200.gif&ct=g');
+    background-size: cover;
 }
 
-body {
-    height: 300dvh;
-    overflow-x: hidden;
+header {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 .hero {
-    height: 100dvh;
-    width: 100dvw;
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem;
+    height: 80vh;
+}
 
-    .background {
-        .toxic {
-            width: 100%;
-            position: absolute;
-            z-index: -2;
-            height: 100dvh;
-        }
-            
-        .partial-color {
-            background-image: linear-gradient(to right top, #340057b2, #93ee00d2);
-            height: 100dvh;
-            width: 70dvw;
-            position: absolute;
-            z-index: -1;
-            right: 0;
-        }
+.hero-text {
+    max-width: 50%;
+    padding: 1rem;
+    margin-right: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in;
+    color: #F9A800;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in;
+    color: #fff;
+}
+
+.cta-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-
-    .content {
-        display: flex;
-        align-items: center;
-        gap: 5rem;
-
-        .left {
-            height: 100dvh;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            width: 50dvw;
-
-            img {
-                width: 40rem;
-                aspect-ratio: 1/1;
-                object-fit: cover;
-                box-shadow: 40px 45px 12px 2px rgba(6, 68, 0, 0.62);
-                -webkit-box-shadow: 40px 45px 12px 2px rgba(6, 68, 0, 0.62);
-                -moz-box-shadow: 40px 45px 12px 2px rgba(6, 68, 0, 0.62);
-            }
-        }
-
-        .right {
-            width: 50dvw;
-
-            .container {
-                width: 40rem;
-                aspect-ratio: 1/1;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-
-                .designer {
-                    font-weight: 100;
-                    font-size: 2rem;
-                    letter-spacing: .5rem;
-                }
-
-                .name {
-                    font-family: "Gwendolyn", cursive;
-                    font-size: 4rem;
-
-                    span {
-                        font-size: 5rem;
-                    }
-                }
-
-                .message {
-                    font-size: 1.5rem;
-                    font-weight: 500;
-                }
-
-                .content {
-                    font-size: 1.5rem;
-                    padding-bottom: 1.5rem;
-                    border-bottom: 2px solid black;
-                    width: fit-content;
-                    text-align: justify;
-                    text-justify: inter-word;
-                }
-
-                img {
-                    height: 7rem;
-                    width: fit-content;
-                }
-
-                .account {
-                    text-decoration: none;
-                    color: black;
-                    font-size: 1.5rem;
-                }
-            }
-        }
-
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

@@ -1,177 +1,110 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #b71616;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #b71616;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(247, 255, 0);
+    animation: slideIn 1s ease-in-out;
+}
+.new-class
+{
+align-items: center;
+margin-top: -200px;
+margin-left: 500px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(242, 255, 0);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    background: url('https://gifdb.com/images/high/angry-birds-red-and-chuck-fighting-fbfql2uwy32n5ulv.gif') no-repeat center center/cover;
     position: relative;
-    height: 300dvh;
-    width: 100dvw;
-    overflow-x: hidden;
 }
 
-.hero {
-    width: 100dvw;
-    position: relative;
-    color: white;
-    
-    & .wallpaper {
-        position: absolute;
-        width: 100dvw;
-        height: 100dvh;
-        z-index: -5;
-        
-        & .background, & .character, & h1 {
-            height: 100dvh;
-            position: absolute;
-            width: 100%;
-        }
-
-        & img {
-            object-fit: cover;
-        }
-
-        & .background {
-            z-index: -4;
-        }
-
-        & h1 {
-            top: 18rem;
-            text-align: center;
-            font-size: 15rem;
-            letter-spacing: 5rem;
-            color: white;
-            font-weight: 900;
-        }
-
-        & .lower-layer {
-            z-index: -3;
-        }
-
-        & .top-layer {
-            color: transparent;
-            align-self: center;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: white;
-            z-index: -1;
-        }
-
-        & .character {
-            z-index: -2;
-        }
-
-    }
-
-    & .date {
-        position: absolute;
-        top: 3rem;
-        left: 5rem;
-        font-weight: 800;
-
-        & .day {
-            letter-spacing: .5rem;
-            font-size: 1.2rem;
-        }
-
-        & .month {
-            letter-spacing: .5rem;
-        }
-
-        &::before {
-            content: '';
-            height: 3rem;
-            width: 1.2rem;
-            background-color: #ff000085;
-            position: absolute;
-            z-index: -1;
-            transform: translateY(-.4rem) translateX(-.5rem);
-        }
-    }
-
-    & .content {
-        height: 100dvh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 3rem 4rem;
-        justify-content: space-between;
-
-        & .top {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: .8rem;
-
-            & .description {
-                width: fit-content;
-                font-size: .8rem;
-            }
-
-            & .letters {
-                font-weight: 600;
-                letter-spacing: .7rem;
-            }
-        }
-
-        & .card1, & .card2 {
-            width: 20dvw;
-            text-align:justify;
-            background-color: rgba(0, 0, 0, 0.308);
-            padding: .7rem 1rem;
-            border-radius: 5px;
-            align-self: self-start;
-            position: relative;
-        }
-            
-        & .card1 {
-            transform: translateY(-8rem);
-        }
-
-        & .card2 {
-            & .title {
-                border-bottom: 4px  solid white;
-                width: fit-content;
-                margin-bottom: 1rem;
-            }
-        }
-
-        & .name {
-            background-color: rgba(0, 0, 0, 0.39);
-            padding: .2rem 2rem;
-            border-radius: 50px;
-        }
-    }
+.content {
+    animation: fadeIn 2s ease-in-out;
 }
 
-@media only screen and (max-width: 1024px) {
-.hero {
-    & .wallpaper { 
-        & h1 {
-            font-size: 10rem;
-            letter-spacing: 3rem;
-        }
-    }
-
-    & .content {
-        & .card1, & .card2 {
-            width: 25dvw;
-            & .title {
-                font-size: 1.2rem;
-                margin-bottom: 0;
-                border-bottom: none;
-            }
-            & .description {
-                font-size: .7rem;
-
-            }
-        }
-
-        & .card1 {
-            transform: translateY(-3rem);
-        }
-    }
-
+h1 {
+    font-size: 4em;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
+
+.highlight {
+    color: rgb(242, 255, 0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in;
+}
+
+.dark {
+    color: #b71616;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in;
+}
+
+button {
+    background: none;
+    border: 2px solid #ffffff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(242, 255, 0);
+    color: #ffffff;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
 }
